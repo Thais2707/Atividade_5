@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body.bg-gray-900 select,
+    body.bg-gray-900 option {
+      color: #fff;  
+      background-color: #040303; 
+    }
+  
+    body.bg-gray-100 select,
+    body.bg-gray-100 option {
+      color: #333;
+      background-color: #fff;
+    }
+
+    .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.task-item span {
+  flex-grow: 1; 
+  padding-right: 10px; 
+}
+
+.task-item button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px; 
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.task-item button i {
+  font-size: 18px;
+}
+
+.edit-btn i {
+  font-size: 16px;
+  color: #f59e0b; 
+}
+
+.delete-btn i {
+  font-size: 16px;
+  color: #dc2626; 
+}
+
+.complete-btn i {
+  font-size: 18px;
+  color: #16a34a;
+}
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">To Do List</h1>
+
+    <div class="flex mb-4">
+      <input id="taskInput" 
+             type="text" 
+             placeholder="Adicione uma nova tarefa" 
+             class="flex-1 border p-2 outline-none">
+      <select id="prioritySelect" class="border rounded-l-md p-2 outline-none">
+        <option value="low">Baixa</option>
+        <option value="medium">Média</option>
+        <option value="high">Alta</option>
+      </select>
+      <button id="addTaskBtn" 
+              class="bg-blue-500 text-white px-4 rounded-r-md hover:bg-blue-600">
+        Adicionar
+      </button>
+    </div>
+
+    <ul id="taskList" class="bg-white rounded-lg shadow-md p-4"></ul>
+  </div>
+
+  <button id="themeToggleBtn" class="bg-gray-500 text-white px-4 rounded hover:bg-gray-600">Tema Claro/Escuro</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
