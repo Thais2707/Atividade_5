@@ -21,6 +21,6 @@ Este é um projeto simples de lista de tarefas (To Do List), onde você pode adi
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/to-do-list.git
+   git clone https://github.com/Thais2707/Atividade_5
 
 2. Abra o arquivo index.html no navegador.
